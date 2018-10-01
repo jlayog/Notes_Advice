@@ -4,7 +4,7 @@ These notes are for my reference and memory only.
 
 
 
-#Linux Ubuntu 18.04 notable commands
+#Linux Ubuntu 18.04 notable commands--------------------------------------------------------------------------------------
 
 $sudo /** gives the user the administrative power to execute commands **/
 
@@ -33,7 +33,7 @@ $ -p, --purge
               base.
 
 
-#Apache2 commands 
+#Apache2 commands-------------------------------------------------------------------------------------------------------- 
 
 ___________________________________________________________________________________
 |  Starting Apache2                      | Apach2 Syntax check                    |
@@ -70,7 +70,7 @@ ________________________________________________________________________________
 |________________________________________|________________________________________|
 
 
-#MySQL commands
+#MySQL commands-----------------------------------------------------------------------------------------------------------
 
 To login (from unix shell) use -h only if needed.
 # [mysql dir]/bin/mysql -h hostname -u username -ppassword
@@ -235,9 +235,7 @@ mysql> create table [table name] (personid int(50) not null auto_increment prima
 
 
 
-
-
-#Wordpress Troubleshooting
+#Wordpress Troubleshooting------------------------------------------------------------------------------------------------
 
 Excerpt from discord regarding why wordpress was not showing up on the webserver:
 
@@ -249,7 +247,7 @@ Corey 10/21 at 8:17 PM
 > tell me
 _________________________________________________________________________________________________________________________
 
-Im Helping You 10/21 at 8:24 PM
+jlayog 10/21 at 8:24 PM
 > so in short, apache talks to the wordpress files while communicating these files back to the web browser.
 
 > The sites-available thing we were talking about deals with the config files for virtual host. 
@@ -273,7 +271,7 @@ Corey 10/21 at 8:27 PM
 > as when u leave it out
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:32 PM
+jlayog 10/21 at 8:32 PM
 > right thats from setting up the virtual host configuration block which i typed out earlier today
 and that specific virtual host config is in the sites-available dir
 _________________________________________________________________________________________________________________________
@@ -287,7 +285,7 @@ Corey  10/21 at 8:33 PM
 > what's diff
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:35 PM
+jlayog 10/21 at 8:35 PM
 > sites available is responsible for holding/storing your vhost configs
 > sites enabled enables or disables these vhost files by removing the specific reference files
 _________________________________________________________________________________________________________________________
@@ -297,7 +295,7 @@ Corey  10/21 at 8:37 PM
 > so sites available has everything
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:37 PM
+jlayog 10/21 at 8:37 PM
 > yes
 > Corey  10/21 at 8:37 PM
 > sites enabled is what is active
@@ -309,7 +307,7 @@ Im Helping You10/21 at 8:37 PM
 > ?
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:40 PM
+jlayog 10/21 at 8:40 PM
 > gimme like 5 min to think lol, i feel like its obvious but something isnt clicking in my head
 _________________________________________________________________________________________________________________________
 
@@ -326,7 +324,7 @@ Corey  10/21 at 8:41 PM
 > it just follows what's in enabled
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:42 PM
+jlayog 10/21 at 8:42 PM
 > so sites enabled because theres shit in sites available
 > Corey  10/21 at 8:42 PM
 > so the fuck
@@ -334,7 +332,7 @@ Im Helping You10/21 at 8:42 PM
 > ok
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:42 PM
+jlayog 10/21 at 8:42 PM
 > LOL
 
 Corey  10/21 at 8:42 PM
@@ -348,7 +346,7 @@ Corey  10/21 at 8:42 PM
 > we are stuck at the config
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:44 PM
+jlayog 10/21 at 8:44 PM
 > so we either remove or edit the config file thats rerouting apache
 _________________________________________________________________________________________________________________________
 
@@ -364,7 +362,7 @@ Corey  10/21 at 8:47 PM
 > you don't fucking fight in the dark without control or understanding over everything going on
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 8:58 PM
+jlayog 10/21 at 8:58 PM
 > OH MY FUCKING GOD
 > IT WORKS
 > jesus christ almighty
@@ -374,7 +372,7 @@ Corey  10/21 at 9:00 PM
 > how
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 9:01 PM
+jlayog 10/21 at 9:01 PM
 > cuz i disbaled the other sites
 > then
 > i realized i was missing a virtual host text in my wordpress
@@ -395,7 +393,7 @@ Corey  10/21 at 9:03 PM
 > you KNOW that's exactly what I did
 _________________________________________________________________________________________________________________________
 
-Im Helping You10/21 at 9:05 PM
+jlayog 10/21 at 9:05 PM
 > shut up corey i love you
 
 
