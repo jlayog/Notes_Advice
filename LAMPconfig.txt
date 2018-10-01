@@ -1,0 +1,266 @@
+
+#Notes on LAMP stack, DigitalOcean, etc.
+These notes are for my reference and memory only.
+
+
+
+#Linux Ubuntu 18.04 notable commands
+
+$sudo /** gives the user the administrative power to execute commands **/
+
+$nano /** nano is a text-editor that lets you write in files in ubuntu **/
+
+$touch /** let's you create files following the directory. e.g. if i wanted to create an index/html in /var/www/html,
+        I would write $ touch /var/www/html/index.html **/
+        
+$rm /** is the command to remove FILES via directory path **/     
+
+$rmdir /** is the command to remove DIRECTORIES via directory path **/
+
+$mkdir /** makes a directory **/
+
+$mkdir -p /** Makes directory path with directory **/
+
+
+#Apache2 commands
+
+$ a2ensite  /** enables vhost files **/
+    
+$ a2dissite  /** disables vhost files **/
+
+
+$ -q, --quiet
+              Don't show informative messages.
+
+$ -m, --maintmode
+              Enables  the  maintainer  mode,  that  is  the  program  invocation  is effectuated
+              automatically by a maintainer script. This switch should not be used by end users.
+
+$ -p, --purge
+              When disabling a module, purge all traces of the module in the internal state  data
+              base.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Wordpress Troubleshooting
+
+Excerpt from discord regarding why wordpress was not showing up on the webserver:
+
+
+Corey 10/21 at 8:17 PM
+> ok
+> so think
+> we know the order of how things are working right
+> tell me
+_________________________________________________________________________________________________________________________
+
+Im Helping You 10/21 at 8:24 PM
+> so in short, apache talks to the wordpress files while communicating these files back to the web browser.
+
+> The sites-available thing we were talking about deals with the config files for virtual host. 
+What im trying to understand about the config file thats messing with my wordpress, 
+is that because theres a default file there that apache automatically goes to instead of wordpress?
+_________________________________________________________________________________________________________________________
+
+Corey 10/21 at 8:27 PM
+> you're going too fast
+> break it down please
+> the process of how apache works
+> in regards to what we did in that droplet that only concerned apache
+> break it up
+> apache
+> it listens to a port on the server
+> port 8-
+> port 80
+> this is common for websites
+> when you go to google.com:80
+> same shit
+> as when u leave it out
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:32 PM
+> right thats from setting up the virtual host configuration block which i typed out earlier today
+and that specific virtual host config is in the sites-available dir
+_________________________________________________________________________________________________________________________
+
+Corey  10/21 at 8:33 PM
+> right
+> so it's apache, it reads the config file
+> and listens to it
+> now dig deep
+> sites enabled vs sites available
+> what's diff
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:35 PM
+> sites available is responsible for holding/storing your vhost configs
+> sites enabled enables or disables these vhost files by removing the specific reference files
+_________________________________________________________________________________________________________________________
+
+Corey  10/21 at 8:37 PM
+> yes
+> so sites available has everything
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:37 PM
+> yes
+> Corey  10/21 at 8:37 PM
+> sites enabled is what is active
+> now
+> think about what is happening
+> apache is being routed to some wrong place, wherever the fuck
+> which means what
+> about sites enabled
+> ?
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:40 PM
+> gimme like 5 min to think lol, i feel like its obvious but something isnt clicking in my head
+_________________________________________________________________________________________________________________________
+
+Corey  10/21 at 8:41 PM
+> i'm not asking you to solve the problem
+> i'm asking questions
+> you're thinking too much
+> look
+> if shit is in my face
+> and i smell it
+> it's because there's fucking shit in my face
+> apache is being routed to the wrong site
+> apache doesn't know anything
+> it just follows what's in enabled
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:42 PM
+> so sites enabled because theres shit in sites available
+> Corey  10/21 at 8:42 PM
+> so the fuck
+> YES
+> ok
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:42 PM
+> LOL
+
+Corey  10/21 at 8:42 PM
+> so what the fuck
+> what is cool - what can we do
+> we are in debug mode
+> trying to fuck with things to see what's going on
+> we are stuck here right
+> think
+> in the process of how apache should work
+> we are stuck at the config
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:44 PM
+> so we either remove or edit the config file thats rerouting apache
+_________________________________________________________________________________________________________________________
+
+Corey  10/21 at 8:47 PM
+> yeah
+> turn everything off dude
+> trn everything the fuck off
+> check to make sure everything is off
+> then add only your rule for wordpress
+> and run it again
+> i mean
+> that's the plan of attack
+> you don't fucking fight in the dark without control or understanding over everything going on
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 8:58 PM
+> OH MY FUCKING GOD
+> IT WORKS
+> jesus christ almighty
+_________________________________________________________________________________________________________________________
+
+Corey  10/21 at 9:00 PM
+> how
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 9:01 PM
+> cuz i disbaled the other sites
+> then
+> i realized i was missing a virtual host text in my wordpress
+> so i added it
+> then boom bam
+_________________________________________________________________________________________________________________________
+
+Corey  10/21 at 9:03 PM
+>see
+> underfuckingstand that shit
+> know the fucking process
+> understadn it step by step
+> control what the fuck is going on
+> play around and change settings and add shit blah bla blah
+> under conditions where you know what the fuck is goin gon
+> i didn't even need to teach you anything
+> i just organized everything you already knew
+> you KNOW that's exactly what I did
+_________________________________________________________________________________________________________________________
+
+Im Helping You10/21 at 9:05 PM
+> shut up corey i love you
+
+
+TL;DR: The way apache works is that it will go in order executing the first vhost file it can find. The order of apache2
+is from left to right. Meaning if it is listed as: default.conf  default-ssl.conf  mywebsite.conf  wordpress.conf
+
+and you wanted to get wordpress.conf to be enabled, it will execute default.conf first and go down this line, until you 
+disable each and everyone of them to get wordpress.conf.
+
+Remember to only edit files in etc/apache2/sites-available/
+
+This is where you will edit vhost files.
+You can see which vhost files are active via etc/apache2/sites-available/
+
+vhosts can be enabled via this command: $sudo a2ensite [filename]
+vhosts disable: $sudo a2dissite [filename]
+
+[END]

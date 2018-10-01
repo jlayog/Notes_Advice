@@ -1,0 +1,7 @@
+#Advice
+
+'Wiggling'
+It being the process of debugging shit, moving things around, printing random data through console to assert values and flow, etc.
+
+"The only time I would say you need to be careful wiggling things is if you're ever put in a position where you're working on a live site/app. this shouldn't ever happen, but it's happened to me while freelancing so I know the scenario exists
+if you wiggle too many things you can, and probably will, break things, which is usually how you figure things out but on a live site could be bad news" -Are
