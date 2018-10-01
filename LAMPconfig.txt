@@ -2,6 +2,7 @@
 #Notes on LAMP stack, DigitalOcean, etc.
 These notes are for my reference and memory only.
 
+Command line guide at: http://conqueringthecommandline.com/book/basics
 
 
 #Linux Ubuntu 18.04 notable commands--------------------------------------------------------------------------------------

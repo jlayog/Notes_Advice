@@ -1,7 +1,14 @@
 #Advice
 
-'Wiggling'
+
+#'Wiggling'
 It being the process of debugging shit, moving things around, printing random data through console to assert values and flow, etc.
 
 "The only time I would say you need to be careful wiggling things is if you're ever put in a position where you're working on a live site/app. this shouldn't ever happen, but it's happened to me while freelancing so I know the scenario exists
 if you wiggle too many things you can, and probably will, break things, which is usually how you figure things out but on a live site could be bad news" -Are
+
+
+
+#Cover Letters
+"In my experience, cover letters need to be customized to the opportunity for the most part. By that I mean, you will always have some sort of "normal" section to it that explains a little about who you are and why you're awesome, but the meat of the letter should reference why you would be awesome to that company, and what you have seen/done/been exposed to that fits with their needs.
+Make the entire thing professional, but in a conversational tone." -Are
