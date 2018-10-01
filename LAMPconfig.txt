@@ -45,48 +45,6 @@ $ -p, --purge
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Wordpress Troubleshooting
 
 Excerpt from discord regarding why wordpress was not showing up on the webserver:
