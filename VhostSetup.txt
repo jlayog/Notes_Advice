@@ -1,0 +1,12 @@
+#Vhost setup
+
+
+#Paste the following while filling in the blanks: 
+#<VirtualHost *:80>
+#    ServerAdmin IP address
+#    ServerName IP address
+#    ServerAlias [filename]
+#    DocumentRoot /var/www/[filename]/html
+#    ErrorLog ${APACHE_LOG_DIR}/error.log
+#    CustomLog ${APACHE_LOG_DIR}/access.log combined
+#</VirtualHost>

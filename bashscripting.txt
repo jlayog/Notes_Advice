@@ -1,0 +1,32 @@
+#Bash notes on Ubuntu 18.04
+
+#Simple bash notes/commands
+
+#!/usr/bin/env bash  --sets up the bash environment like setting a doctype AKA shebang line
+
+$ chmod changes permission of a script
+
+$ chmod +x adds executability on the script
+
+$ ./script is used if the script is not in the path
+
+$ NAME=${1?Error: No Name Given}
+     
+  where^ 1 refers to the first input, the question mark will be the output if nothing is entered
+  
+$ echo 
+         is the same as print()
+  
+-----------------------------------------------------------------------------------------------------
+
+#Bash scripting
+
+Step 1:
+Setup the environment with #!/usr/bin/env bash
+
+Step 2: Write the command queue. E.g. ~c 
+                                      sudo apt-get update 
+                                      sudo apt-get install [whatever software package]
+                                      
+-----------------------------------------------------------------------------------------------------
+
