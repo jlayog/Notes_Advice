@@ -13,7 +13,8 @@ sets to the client program.
 Differences in SQL and MySQL
 --MYSQL available for free since it is open source, But SQL is not open source.
 
---MYSQL offers only updateable views, SQL offers indexed views which are much more powerful, performing wise.
+--MYSQL offers only updateable views, SQL offers indexed views which are much more powerful, performing 
+wise.
 
 --MYSQL doesn't support XML, Where as XML supports it.
 
@@ -25,10 +26,58 @@ Differences in SQL and MySQL
 
 --Stored procedures and full joins not offered in MYSQL, But offered in SQL.
 
-To give a better idea of the differences in MySQL and SQL Server -MySQL is geared more toward selecting data so it can be displayed, updated and saved again. MySQL is weaker in the areas of inserting and deleting data. 
+To give a better idea of the differences in MySQL and SQL Server -MySQL is geared more toward selecting 
+data so it can be displayed, updated and saved again. MySQL is weaker in the areas of inserting and 
+deleting data. 
 
 #MySQL
-is an RDBMS(Relational Database Management System) that allows keeping the data that exists in a database organized. This RDBMS system is used with the combination of PHP and Apache Web Server, on top of a Linux distribution. MySQL uses the SQL language to query the database. Used to store, retrieve, modify and administrate a database using SQL.
+is an RDBMS(Relational Database Management System) that allows keeping the data that exists in a database 
+organized. This RDBMS system is used with the combination of PHP and Apache Web Server, on top of a Linux 
+distribution. MySQL uses the SQL language to query the database. Used to store, retrieve, modify and 
+administrate a database using SQL.
 MySQL is database software. It used "SQL" language to query the database.
 
 Purpose: Allows data handling, storing, modifying, deleting in a tabular format.
+
+#RDBMS
+A relational database management system (RDBMS) is a collection of programs and capabilities that enable 
+IT teams and others to create, update, administer and otherwise interact with a relational database. Most 
+commercial RDBMSes use Structured Query Language (SQL) to access the database, although SQL was invented 
+after the initial development of the relational model and is not necessary for its use.
+
+The most basic RDBMS functions are related to create, read, update and delete operations, 
+collectively known as CRUD. They form the foundation of a well-organized system that 
+promotes consistent treatment of data.
+
+
+#Relational database
+A relational database is a set of formally described tables from which data can be accessed or 
+reassembled in many different ways without having to reorganize the database tables. The standard user 
+and application programming interface (API) of a relational database is the Structured Query Language 
+(SQL). SQL statements are used both for interactive queries for information from a relational database 
+and for gathering data for reports.
+
+--Advantages
+    The main advantages of relational databases are that they enable users to easily categorize and store 
+    data that can later be queried and filtered to extract specific information for reports. Relational 
+    databases are also easy to extend and aren't reliant on physical organization. After the original 
+    database creation, a new data category can be added without all existing applications being modified.
+    
+   - Accurate: Data is stored just once, which eliminates data deduplication.
+   - Flexible: Complex queries are easy for users to carry out.
+   - Collaborative: Multiple users can access the same database.
+   - Trusted: Relational database models are mature and well-understood.
+   - Secure: Data in tables within relational database management systems (RDBMSes) can be limited to
+     allow access by only particular users.
+     
+     
+#RDBMS vs. DBMS
+In general, databases store sets of data that can be queried for use in other applications. A database 
+management system supports the development, administration and use of database platforms.
+
+An RDBMS is a type of DBMS with a row-based table structure that connects related data elements and 
+includes functions that maintain the security, accuracy, integrity and consistency of the data.   
+     
+     
+     
+     
