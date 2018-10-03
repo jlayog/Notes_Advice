@@ -7,31 +7,45 @@ Customers can host multiple websites through VPS, and install any apps at their 
 
 
 #Shared Hosting
-Shared hosting allows multiple websites to utilize a single server. Each customer that uses shared hosting will have a limit on the total amount of server resources (bandwidth, power, and memory) they can use, defined by the provider's hosting package.
+Shared hosting allows multiple websites to utilize a single server. 
+Each customer that uses shared hosting will have a limit on the total amount of server resources
+(bandwidth, power, and memory) they can use, defined by the provider's hosting package.
 Logically distributes a web server to accomodate, serve and operate more than one website. Also known as virtual shared hosting.
-Shared hosting is recommended for websites that are smaller in size and don't have a large amount of web traffic, and have lower security concerns.
+Shared hosting is recommended for websites that are smaller in size and don't have a 
+large amount of web traffic, and have lower security concerns.
     
 #Dedicated Hosting
-A host config in which a server is devoted to a single organization for a single purpose, e.g. a website. Also known as a dedicated server, can be set up in-house or externally as a service from within a data center.
+A host config in which a server is devoted to a single organization for a single purpose, e.g. a website.
+Also known as a dedicated server, can be set up in-house or externally as a service from 
+within a data center.
 
 #Difference between shared and dedicated
 --Sites hosted
-    With shared, other ogranizations are utilizing the server along with yours. In dedicated, your organization is the only user hosted on the server.
+    With shared, other ogranizations are utilizing the server along with yours. 
+    In dedicated, your organization is the only user hosted on the server.
     
 --Bandwidth/diskspace
-    With shared, amount of disk space and bandwidth alloted is limited since there are others sharing the server. On dedicated, these resources are up to your requirements.
+    With shared, amount of disk space and bandwidth alloted is limited since there are others sharing the server. 
+    On dedicated, these resources are up to your requirements.
     
 --Required tech skill
-    In shared hosting, your organization won't need staff specialized to maintain the server. Maintenance, administration and security are managed by the shared hosting provider.
-    In dedicated hosting, organizations will need IT & webmaster skills, install, administer and manage the server's overall health. Cost of managed services is typically far less than building, staffing and onboarding your own IT department
+    In shared hosting, your organization won't need staff specialized to maintain the server. 
+    Maintenance, administration and security are managed by the shared hosting provider.
+    
+    In dedicated hosting, organizations will need IT & webmaster skills, install, administer and 
+    manage the server's overall health. Cost of managed services is typically far 
+    less than building, staffing and onboarding your own IT department.
     
 --Security
     With shared hosting, the provider installs firewalls, server security applications and programs. 
     In dedicated hosting, securing your server will be your organization's responsibility.
     
-    On a dedicated server, your IT team will be able to control security programs you install. Since you are the only user on the server, there are fewer chances to acquire viruses, malware and spyware.
+    On a dedicated server, your IT team will be able to control security programs you install. 
+    Since you are the only user on the server, there are fewer chances to acquire viruses, malware and spyware.
 
 --Server Performance and Response Time
-    In shared, unexpected bursts of web traffic could drain the server’s limited bandwidth resources. This leads to slow response times and slow loading times, through no direct fault of your own organization. If another user on the server is suddenly popular, then your site may go down as well.
+    In shared, unexpected bursts of web traffic could drain the server’s limited bandwidth resources. 
+    This leads to slow response times and slow loading times, through no direct fault of your own organization. 
+    If another user on the server is suddenly popular, then your site may go down as well.
     
     In dedicated, you can count on your server to be highly responsive with adequate bandwidth when you need it.
