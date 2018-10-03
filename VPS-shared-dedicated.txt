@@ -13,6 +13,8 @@ Each customer that uses shared hosting will have a limit on the total amount of 
 Logically distributes a web server to accomodate, serve and operate more than one website. Also known as virtual shared hosting.
 Shared hosting is recommended for websites that are smaller in size and don't have a 
 large amount of web traffic, and have lower security concerns.
+
+Github Pages is a good example of shared hosting, since you cannot do back-end.
     
 #Dedicated Hosting
 A host config in which a server is devoted to a single organization for a single purpose, e.g. a website.

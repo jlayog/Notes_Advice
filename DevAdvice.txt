@@ -14,7 +14,6 @@ if you wiggle too many things you can, and probably will, break things, which is
 Make the entire thing professional, but in a conversational tone." -Are
 
 
-#Virtual Private Servers (My DigitalOcean Droplet)
-Digital Ocean Droplet is a Virtual Private Server - A virtual computer that's sold to multiple customers.
-Logically private, but not physically separate. It's limited in performance due to multiple users on the VPS.
-Customers can host multiple websites through VPS, and install any apps at their own discretion.
+
+
+

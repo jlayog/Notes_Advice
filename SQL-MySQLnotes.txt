@@ -1,0 +1,34 @@
+#SQL Structed Query Language and MySQL
+
+#SQL is a domain-specific query language(a language for the specification of procedures for the retrieval (and sometimes also modification) of information from a database) used in programming and designed for updating, deleting, and requesting information from databases.
+
+Purpose: To query and operate database system.
+
+In a distributed database system, a program often referred to as the database's "back end" runs constantly 
+on a server, interpreting data files on the server as a standard relational database. Programs on client 
+computers allow users to manipulate that data, using tables, columns, rows, and fields. To do this, client 
+programs send SQL statements to the server. The server then processes these statements and returns result 
+sets to the client program.
+
+Differences in SQL and MySQL
+--MYSQL available for free since it is open source, But SQL is not open source.
+
+--MYSQL offers only updateable views, SQL offers indexed views which are much more powerful, performing wise.
+
+--MYSQL doesn't support XML, Where as XML supports it.
+
+--Auto tuning is not supported in MYQL, But can in SQL.
+
+--User defined functions are not supported in MYSQL, But supported in SQL.
+
+--Transaction support is very much limited in MYSQL, But extensively and fully offered in SQL.
+
+--Stored procedures and full joins not offered in MYSQL, But offered in SQL.
+
+To give a better idea of the differences in MySQL and SQL Server -MySQL is geared more toward selecting data so it can be displayed, updated and saved again. MySQL is weaker in the areas of inserting and deleting data. 
+
+#MySQL
+is an RDBMS(Relational Database Management System) that allows keeping the data that exists in a database organized. This RDBMS system is used with the combination of PHP and Apache Web Server, on top of a Linux distribution. MySQL uses the SQL language to query the database. Used to store, retrieve, modify and administrate a database using SQL.
+MySQL is database software. It used "SQL" language to query the database.
+
+Purpose: Allows data handling, storing, modifying, deleting in a tabular format.
