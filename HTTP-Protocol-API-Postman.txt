@@ -7,7 +7,7 @@ or NodeJS, postman is a good testing environment for back-end to immediately see
 
 #HTTP
 HTTP= HyperText Transfer Protocol
-TCP/ICP based
+TCP/IP based
 
 The HTTP is an application layer protocol that allows web-based applications to commmunicate and exchange data.
 Basically a messenger of the web.
