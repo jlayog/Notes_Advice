@@ -23,13 +23,16 @@ delivers the repsonse and closes.
 
 --HTTP can deliver any sort of data, as long as the two computers are able to read it.
 
---HTTP is stateless: the client and server know about each other just during the current request. If it closes, and the two computers want to connect again, they need to provide information to each other anew, and the connection is handled as the very first one.
+--HTTP is stateless: the client and server know about each other just during the current request. If it closes, 
+and the two computers want to connect again, they need to provide information to each other anew, and the connection 
+is handled as the very first one.
 
 
 ##HTTP Request and Response
 
 #HTTP messages
-Usually consisted of start line - headers - body, which usually contains plain text information, but can ocassionally contain binary data.
+Usually consisted of start line - headers - body, which usually contains plain text information, but can ocassionally contain 
+binary data.
 Information in these sections can vary depending on the http message (request/response).
 
 #HTTP request message
@@ -40,7 +43,8 @@ Sent from the user.
         -- GET: Telling the server to send you data
         -- POST: Telling the server to store data in the database
 
-    -- URI: Uniform Resource Identifier is a set of readable characters and a way to locate the resources you are requesting from the server
+    -- URI: Uniform Resource Identifier is a set of readable characters and a way to locate the resources you are requesting 
+    from the server
     
     -- HTTP version is what the client uses so that the server understands the message
     
