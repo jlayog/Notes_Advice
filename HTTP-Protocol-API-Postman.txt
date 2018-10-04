@@ -1,0 +1,76 @@
+##Postman, API, HTTP protocol
+
+#Postman 
+is a tool, ideal for writing your own API. So if you're writing server side code like PHP, java,
+or NodeJS, postman is a good testing environment for back-end to immediately see results.
+
+
+#HTTP
+HTTP= HyperText Transfer Protocol
+TCP/ICP based
+
+The HTTP is an application layer protocol that allows web-based applications to commmunicate and exchange data.
+Basically a messenger of the web.
+It is used to deliver contents, for example, images, videos, audios, documents, etc.
+
+
+Computers that communicate via HTTP must speak the http protocol.
+
+Important notes:
+--HTTP is connectionless: after making the request, the client disconnects from the server,
+then when the response is ready, the server re-establishes the connection again and 
+delivers the repsonse and closes.
+
+--HTTP can deliver any sort of data, as long as the two computers are able to read it.
+
+--HTTP is stateless: the client and server know about each other just during the current request. If it closes, and the two computers want to connect again, they need to provide information to each other anew, and the connection is handled as the very first one.
+
+
+##HTTP Request and Response
+
+#HTTP messages
+Usually consisted of start line - headers - body, which usually contains plain text information, but can ocassionally contain binary data.
+Information in these sections can vary depending on the http message (request/response).
+
+#HTTP request message
+Sent from the user.
+--Start line contains: Method - URI - HTTP version (e.g. GET /products/myproduct.html HTTP/1.0)
+    
+    -- The method is a command that tells the server what to do (e.g. give me data, delay, or store in database)
+        -- GET: Telling the server to send you data
+        -- POST: Telling the server to store data in the database
+
+    -- URI: Uniform Resource Identifier is a set of readable characters and a way to locate the resources you are requesting from the server
+    
+    -- HTTP version is what the client uses so that the server understands the message
+    
+--Headers specify information rules/name value pairs and can contain: 
+    -- Host: which is the address of the server where the client is sending the request (e.g. www.mywebsite.com)
+    -- Accept-language: specifies the language
+    -- Accept: tells the server what MIME type(fileType/ext e.g.: image/gif, text/html) file the client is requesting
+    
+#HTTP Response message
+Has a start line, but the start line does not contain a method or URI, instead contains HTTP version and Status Code.
+--Start line: HTTP Version - Status code
+
+    --Status code tells the client if the request succeeded or failed. (e.g.: 200:ok, 404:file not found)
+    
+--Headers
+--Body contains the requested file
+
+Response E.g.:
+
+    Start line: HTTP/1.0 200: OK
+    Headers:    Host: www.mywebsite.com
+                Accept-language: en-us
+                Accept: text-html
+    Body:       products/myproduct.html
+    
+    
+    
+
+
+
+
+
+
