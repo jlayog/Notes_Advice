@@ -72,6 +72,24 @@ Response E.g.:
     
     
     
+    
+    
+    
+#How browser/web server/internet works
+
+link: http://www.informit.com/articles/article.aspx?p=680307
+
+So browsers are web clients, the client contacts a web server and requests information or resources(HTTP). The webserver locates then sends the information to the web browser which displays the results. The browser itself is a group of structured codes which execute how to display the web page on your screen.
+
+so like: User interface -> browser engine -> rendering engine -> networking, js interpreter, UI backend
+
+link: https://serverfault.com/questions/69696/how-does-server-side-technology-actually-work
+
+Web browser requests http://www.mywebsite.com/ to server, the apache web server receives the request and prepares to send appropriate information to the web browser. 
+Apache's integration with PHP starts the PHP interpreter on the server and executes PHP code in the index.php file
+
+The PHP code requests to get or set data from MySQL database to use in the web page or for user/session 
+    
 
 
 
