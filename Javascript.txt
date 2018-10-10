@@ -1,0 +1,110 @@
+####Javascript notes####
+
+#Notation
+Best Practice in writing JS, details in camelCase. In camelCase, multi-word variable names have the 
+first word in lowercase and the first letter of each subsequent word is capitalized.
+
+
+#Number increments
+myVar++ is the equivalent of myVar = myVar + 1
+
+inversely
+
+myVar-- is the equivalent of myVar = myVar - 1
+
+
+#Remainders in Javascript
+The remainder operator % gives the remainder of the division of two numbers.
+Ex:
+5 % 2 = 1 because
+Math.floor(5 / 2) = 2 (Quotient)
+2 * 2 = 4
+5 - 4 = 1 (Remainder)
+
+
+#Augmented Addition
+In programming, it is common to use assignments to modify the contents of a variable. 
+Remember that everything to the right of the equals sign is evaluated first, so we can say:
+
+myVar = myVar + 5;
+
+to add 5 to myVar. Since this is such a common pattern, there are operators which do both a 
+mathematical operation and assignment in one step.
+
+One such operator is the += operator.
+
+var myVar = 1;
+myVar += 5;
+console.log(myVar); // Returns 6
+
+Augmented: 
+Subtraction: var -=
+Division: var /=
+Multiplication: var *=
+
+
+#Escape Sequences in Strings
+Code:                 Output:
+\'                      Single quote
+\"                      double quote
+\\                      backslash
+\n                      new line    
+\r                      carriage return
+\t                      tab
+\b                      backspace
+\f                      form feed
+
+#Adding strings together
+ex:
+var myStr = "This is the start. " + "This is the end." 
+
+Plus Equals Operator
+var myStr = "This is the first sentence. ";
+myStr += "This is the second sentence.";
+
+
+#Length of a String
+You can find the length of a String value by writing .length 
+after the string variable or string literal.
+Ex:
+"Cookies and Cream".length; would output to 17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
