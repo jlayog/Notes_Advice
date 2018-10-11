@@ -70,29 +70,77 @@ Ex:
 "Cookies and Cream".length; would output to 17
 
 
+#Word Blannks
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  var result = "";
+      result+= "My "+myAdjective+" "+myNoun+" "+myVerb+" very "+myAdverb+".";
+
+  return result;
+}
+
+// Change the words here to test your function
+wordBlanks("cat", "small", "walked", "slowly");
 
 
 
+#Arrays
+--You can store multiple values within one variable using an Array
+Ex:
+myVar = ["Me", 23]
+
+--You can also nest one array within another   
+var myArray = [["Treston", 22], ["Ohio", 578]];
+
+When counting Arrays start at 0. So for example:
+var myArray = [50, 60, 70];
+
+typing array[0]; would output to 50
+
+you can also assign it to other variables as such:
+var myData = myArray[2]; // output: 70
+
+--You can also overrite Array data because unline strings, arrays are mutable
+Ex:
+var myArray = [50, 60, 70];
+myArray[0] = 15; // output: [15, 60 ,70]
 
 
+#Multi-Dimensional Arrays with Indexes
+Multi-Dimensional Arrays are like inception, a dream within a dream, an array within an array.
+For example: 
+var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11
+
+#.push()
+An easy way to append data to the end of an array is via the push() function.
+.push() takes one or more parameters and "pushes" them onto the end of the array.
+Example:
+var myArray = [1,2,3]
+myArray.push(4)
+// myArray is now [1,2,3,4]
+
+More complex ex:
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3])
+//myArray is now  [["John", 23], ["cat", 2], ["dog", 3]]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#Manipulating Arrays with .pop()
+.pop() is used to "pop" a value off of the end of an array. 
+We can store this "popped off" value by assigning it to a variable. 
+In other words, .pop() removes the last element from an array and returns that element. 
+Ex:
+var myArray = [["John", 23], ["cat", 2]];
+var removedFromMyArray = myArray.pop(["cat",2]);
+// myArray is now  [["John", 23]]
+// and removedFromArray is ["cat", 2]
 
 
 
