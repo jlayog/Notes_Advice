@@ -142,12 +142,165 @@ var removedFromMyArray = myArray.pop(["cat",2]);
 // myArray is now  [["John", 23]]
 // and removedFromArray is ["cat", 2]
 
+#.shift()
+.shift() removes the first item from an Array.
+Ex:
+var myArray = [["John", 23], ["dog", 3]];
+var removedFromMyArray = myArray.shift(["John", 23]);
+// myArray is now  ["dog", 3]
+// and removedFromArray is ["John", 23]
 
 
+#.unshift()
+.unshift() works exactly like .push(), but instead of adding the element at the end of the array, 
+unshift() adds the element at the beginning of the array.
+Ex:
+
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift(); // ourArray now equals ["J", "cat"]
+ourArray.unshift("Happy"); 
+// ourArray now equals ["Happy", "J", "cat"]
 
 
+#Functions
+In JavaScript, we can divide up our code into reusable parts called functions.
+Here's an example of a function:
+function functionName() {
+  console.log("Hello World");
+}
+You can call or invoke this function by using its name followed by parentheses, like this:
+
+functionName();
+
+Each time the function is called it will print out the message "Hello World" on the dev console. 
+All of the code between the curly braces will be executed every time the function is called.
+EX:
+
+function reusableFunction() {
+    console.log("Hi World")
+}
+
+reusableFunction();
+// Hi World
 
 
+#Parameters in functions
+Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. 
+When a function is defined, it is typically defined along with one or more parameters. 
+The actual values that are input (or "passed") into a function when it is called are known as arguments.
+Ex:
+
+function functionWithArgs(a,b) {
+  console.log(a + b);
+}
+functionWithArgs(1, 2);
+// 3
+
+Ex2:
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+testFun("Hello", "World");
+We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". 
+Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
+
+
+#Global Scope and Functions
+scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. 
+This means, they can be seen everywhere in your JavaScript code.
+Variables which are used without the var keyword are automatically created in the global scope. 
+This can create unintended consequences elsewhere in your code or when running a function again. 
+You should always declare your variables with var.
+
+
+#Local Scope
+Variables which are declared within a function, as well as the function parameters have local scope. 
+That means, they are only visible within that function.
+Ex: 
+
+function myLocalScope() {
+  'use strict'; 
+var myVar = "Hi";
+  console.log(myVar);
+}
+myLocalScope(); // "Hi"
+console.log(myVar); // myVar is not defined
+
+
+#Global vs Local Scope
+It is possible to have both local and global variables with the same name. 
+When you do this, the local variable takes precedence over the global variable.
+Ex:
+
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  var outerWear = "sweater";
+  return outerWear;
+}
+
+myOutfit();
+
+
+#Return in Function
+We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+Ex:
+
+function timesFive(num) {
+  return num * 5;
+}
+var answer = timesFive(2);
+// 10
+
+--Undefined Value returned from a Function
+A function can include the return statement but it does not have to. 
+In the case that the function doesn't have a return statement, when you call it, the function processes 
+the inner code but the returned value is undefined.
+Ex:
+
+var sum = 8;
+function addFive(num) {
+  sum = sum + 5;
+}
+var returnedValue = addFive();
+
+
+#Assignment with Returned Value
+If you'll recall from our discussion of Storing Values with the Assignment Operator, 
+everything to the right of the equal sign is resolved before the value is assigned. 
+This means we can take the return value of a function and assign it to a variable.
+
+Assume we have pre-defined a function sum which adds two numbers together, then:
+
+ourSum = sum(5, 12);
+
+will call sum function, which returns a value of 17 and assigns it to ourSum variable.
+Ex:
+
+var changed = 0;
+
+function change(num) {
+  return (num + 5) / 3;
+}
+
+changed = change(10); // 5
+
+
+#Stand in Line
+A queue is an abstract Data Structure where items are kept in order. New items can be added at the 
+back of the queue and old items are taken off from the front of the queue.
+Ex:
+
+function nextInLine(arr, item) {
+  arr.push(item);
+  var removed = arr.shift();
+  return removed; 
+}
+
+Explanation: 
+- Push item at the end of arr.
+- Call the shift() method on arr to get the first item and store it in removed.
+- Return removed.
 
 
 
