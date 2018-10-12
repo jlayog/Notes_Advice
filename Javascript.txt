@@ -303,6 +303,200 @@ Explanation:
 - Return removed.
 
 
+#Boolean Values
+Booleans may only be one of two values: true or false. They are basically little on-off switches, 
+where true is "on" and false is "off." These two states are mutually exclusive.
+Boolean values are never written with quotes. 
+The strings "true" and "false" are not Boolean and have no special meaning in JavaScript.
+
+
+#Conditional If Statements
+If statements are used to make decisions in code. The keyword if tells JavaScript to execute 
+the code in the curly braces under certain conditions, defined in the parentheses. 
+These conditions are known as Boolean conditions and they may only be true or false.
+
+When the condition evaluates to true, the program executes the statement inside the curly braces. 
+When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.
+Ex:
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) { 
+    return "Yes, it's true";
+  }
+  return "No, it's false";
+}
+
+// Setup
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue){
+    return "Yes, that was true"
+  }
+  return "No, that was false"
+}
+trueOrFalse(true); // Yes, that was true
+
+
+#Comparison Operator: Equality
+The most basic operator is the equality operator ==. The equality operator compares two values and 
+returns true if they're equivalent or false if they are not. Note that equality is different from 
+assignment (=), which assigns the value at the right of the operator to a variable in the left.
+Ex:
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testEqual(10); // Not Equal
+
+In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:
+
+1 == 1 // true
+1 == 2 // false
+1 == '1' // true
+"3" == 3 // true
+
+
+
+##Strict Equality
+Strict equality (===) is the counterpart to the equality operator (==). 
+However, unlike the equality operator, which attempts to convert both values being compared to a common type, 
+the strict equality operator does not perform a type conversion.
+
+If the values being compared have different types, they are considered unequal, and the strict equality 
+operator will return false.
+Ex: 
+3 === 3 // true
+3 === '3' // false
+
+In the second example, 3 is a Number type and '3' is a String type.
+Code Example:
+function testStrict(val) {
+  if (val === 7) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+testStrict("7"); // Not Equal
+
+
+##Inequality Operator
+The inequality operator (!=) is the opposite of the equality operator. It means "Not Equal" and returns 
+false where equality would return true and vice versa. Like the equality operator, the inequality operator 
+will convert data types of values while comparing.
+Examples:
+1 != 2 // true
+1 != "1" // false
+1 != '1' // false
+1 != true // false
+0 != false // false
+
+Code example:
+function testNotEqual(val) {
+  if (val != 99) { 
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testNotEqual(10); // Not Equal
+
+
+##Strict Inquality Operator
+The strict inequality operator (!==) is the logical opposite of the strict equality operator. 
+It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. 
+Strict inequality will not convert data types.
+Examples:
+3 !== 3 // false
+3 !== '3' // true
+4 !== 3 // true
+
+
+#Greater Than >
+The greater than operator (>) compares the values of two numbers. If the number to the left is greater 
+than the number to the right, it returns true. Otherwise, it returns false.
+Like the equality operator, greater than operator will convert data types of values while comparing.
+
+
+
+##Greater Than or Equal To >=
+Ex:
+6 >= 6 // true
+7 >= '3' // true
+2 >= 3 // false
+'7' >= 9 // false
+
+
+#Logical and
+Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns 
+true if and only if the operands to the left and right of it are true.
+Ex:
+
+function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25) {
+      return "Yes";
+    }
+  return "No";
+}
+
+
+#Comparisons with Logical Or
+The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+Ex:
+
+function testLogicalOr(val) {
+  if (val < 10 || val > 20) {
+    return "Outside";
+  }
+  return "Inside";
+}
+
+
+#Else Statements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
