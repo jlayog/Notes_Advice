@@ -512,24 +512,273 @@ function bar(x) {
 }
 // Less than two
 
-These two will have different outputs
+These two will have different outputs.
+
+-- You can chain If Else Statements 
+Ex:
+function testSize(num) {
+  if (num < 5) {
+    return "Tiny";
+  }
+  else if (num < 10) {
+    return "Small";
+  }
+  else if (num < 15) {
+    return "Medium";
+  }
+else if (num < 20) {
+  return "Large";
+}
+else if (num >= 20) {
+  return "Huge";
+}
+else {
+  return "Change Me";
+}
+}
+testSize();
 
 
+#Switch Statements
+If you have many options to choose from, use a switch statement. 
+A switch statement tests a value and can have many case statements which define various possible values. 
+Statements are executed from the first matched case value until a break is encountered.
+
+Ex:
+switch(num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  case valueN:
+    statementN;
+    break;
+}
+
+A switch statement first evaluates its expression. It then looks for the first case clause whose expression evaluates 
+to the same value as the result of the input expression (using the strict comparison, (===) and transfers control to 
+that clause, executing the associated statements. (If multiple cases match the provided value, the first case that matches 
+is selected, even if the cases are not equal to each other.)
+
+If no matching case clause is found, the program looks for the optional default clause, and if found, transfers control to 
+that clause, executing the associated statements. If no default clause is found, the program continues execution at the statement 
+following the end of switch. By convention, the default clause is the last clause, but it does not need to be so.
+
+The optional break statement associated with each case label ensures that the program breaks out of switch once the matched 
+statement is executed and continues execution at the statement following switch. If break is omitted, the program continues 
+execution at the next statement in the switch statement.
+
+Ex2: 
+function caseInSwitch(val) {
+  var answer = "";
+  switch(val) {
+    case 1: 
+    return "alpha";
+    break;
+    case 2:
+    return "beta";
+    break;
+    case 3:
+    return "gamma";
+    break;
+    case 4:
+    return "delta";
+    break;
+  }
+  return answer;  
+}
+caseInSwitch(1);
+
+##Default Option in Switch Statements
+In a switch statement you may not be able to specify all possible values as case statements. 
+Instead, you can add the default statement which will be executed if no matching case statements are found. 
+Think of it like the final else statement in an if/else chain.
+Ex:
+function switchOfStuff(val) {
+  var answer = "";
+  // Only change code below this line
+  switch(val) {
+    case 'a':
+    answer = "apple";
+    break;
+    case 'b':
+    answer = "bird";
+    break;
+    case 'c':
+    answer = "cat";
+    break;
+    default:
+    answer = "stuff";
+    break;
+  } 
+  return answer;  
+}
+switchOfStuff(1);
 
 
+-- Multiple Switch Statements
+If the break statement is omitted from a switch statement's case, the following case statement(s) are executed 
+until a break is encountered. 
+
+If you have many options to choose from, a switch statement can be easier to write than many chained if/else if statements. 
+Ex: The following  
+
+if (val === 1) {                                
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
+
+can be replaced with: 
+
+switch(val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
+
+Example 2:
+
+function chainToSwitch(val) {
+  var answer = "";
+  if (val === "bob") {
+    answer = "Marley";
+  } else if (val === 42) {
+    answer = "The Answer";
+  } else if (val === 1) {
+    answer = "There is no #1";
+  } else if (val === 99) {
+    answer = "Missed me by this much!";
+  } else if (val === 7) {
+    answer = "Ate Nine";
+  }
+  return answer;  
+}
+
+convert to:
+
+function chainToSwitch(val) {
+    var answer = "";
+    switch(val) {
+    case "bob":
+        answer = "Marley";
+        break;
+    case 42: 
+        answer = "The Answer";
+        break;
+    case 1:
+        answer = "There is no #1";
+        break;
+    case 99:
+        answer = "Missed me by this much!";
+        break;
+    case 7: 
+        answer = "Ate Nine";
+        break;
+}
+return answer;
+}
 
 
+#Returning Boolean Value
+All comparison operators return a boolean true or false value.
+Sometimes people use an if/else statement to do a comparison, like this:
+
+function isEqual(a,b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
+
+function isEqual(a,b) {
+  return a === b;
+}
 
 
+#Return Early Pattern for Functions
+When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+Ex:
+// Setup
+function abTest(a, b) {
+  if (a < 0 || b < 0)
+  return undefined;
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
 
 
+#Objects
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, 
+you access the data in objects through what are called properties.
+Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+
+Here's a sample cat object:
+
+var cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+
+In this example, all the properties are stored as strings, such as - "name", "legs", and "tails". 
+However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, 
+as follows:
+
+var anotherObject = {
+  make: "Ford",
+  5: "five",
+  "model": "focus"
+};
+
+However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+
+Example code:
+Make an object that represents a dog called myDog which contains the properties "name" (a string), "legs", "tails" and "friends"
+var myDog = {
+  "name": "Fido",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Owners"]
+};
 
 
+#Accessing Object Properties with Dot Notation
+There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+Here is a sample of using dot notation (.) to read an object's property:
+var myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+var prop1val = myObj.prop1; // val1
+var prop2val = myObj.prop2; // val2
 
+Example Code:
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
 
-
-
-
+var hatValue = testObj.hat;     
+var shirtValue = testObj.shirt;
 
 
 

@@ -1,0 +1,116 @@
+#Golf JS Exercise
+Code:
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+  if (strokes === 1) {
+    return "Hole-in-one!";
+  }
+  else if (strokes <= par - 2) {
+    return "Eagle";
+  }
+  else if (strokes == par - 1) {
+    return "Birdie";
+  }
+  else if (strokes == par) {
+    return "Par";
+  }
+  else if (strokes == par + 1) {
+    return "Bogey";
+  }
+  else if (strokes == par + 2) {
+    return "Double Bogey";
+  }
+  else if (strokes >= par + 3) {
+    return "Go Home!";
+  }
+  else {
+  return "Change Me";
+  }
+}
+golfScore(5, 4);
+
+
+Your function will be passed par and strokes arguments. Return the correct string according to this table 
+which lists the strokes in order of priority; top (highest) to bottom (lowest):
+
+Strokes	      Return
+1	         "Hole-in-one!"
+<= par - 2	 "Eagle"
+par - 1	     "Birdie"
+par	         "Par"
+par + 1	     "Bogey"
+par + 2	     "Double Bogey"
+>= par + 3	 "Go Home!"
+
+
+
+
+#Blackjack - Counting Cards
+You will write a card counting function. It will receive a card parameter, which can be a number or a string, 
+and increment or decrement the global count variable according to the card's value (see table). The function will
+then return a string with the current count and the string Bet if the count is positive, or Hold if the count is zero
+or negative. The current count and the player's decision (Bet or Hold) should be separated by a single space.
+
+Count Change	         Cards
++1	                     2, 3, 4, 5, 6
+0	                     7, 8, 9
+-1	                     10, 'J', 'Q', 'K', 'A'
+
+
+Do NOT reset count to 0 when value is 7, 8, or 9.
+Do NOT return an array.
+Do NOT include quotes (single or double) in the output.
+
+Code:
+
+var count = 0;
+
+function cc(card) {
+  switch(card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--;
+      break;
+  }
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
+
+Check the value of each card via a switch statement.
+The variable count:
+- Increases by 1 if the card is a 2, 3, 4, 5, or 6.
+- Since 7, 8, and 9 aren’t worth anything, we ignore those cards in our switch statement.
+- Decreases by 1 if the card is a 10, ‘J’, ‘Q’, ‘K’, or ‘A’.
+Check the value of count and return the appropriate response.
+
+Alternate code:
+
+function cc(card) {
+  var regex = /[JQKA]/;
+  if (card > 1 && card < 7){count++;}
+  else if (card === 10 || String(card).match(regex)){count--;}
+
+  if (count > 0) return count + " Bet";
+  return count + " Hold";
+}
+
+The function first evaluates if the condition card is a value greater than 1 and lower than 7, 
+in which case it increments count by one. Then if the card is 10 or higher it decrements count by one. 
+The variable regex is a regular expression representing values (letters) for the higher cards.
+The else statement checks those values with the || (logical OR) operator; first for 10 and then for any string 
+that matches the regular expression using String.match().
+
+
