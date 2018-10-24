@@ -1107,25 +1107,373 @@ var myPlants = [
 var secondTree = myPlants[1].list[1]; // "pine"
 
 
+#While Loops
+You can run the same code multiple times by using a loop.
+The first type of loop we will learn is called a "while" loop because it 
+runs "while" a specified condition is true and stops once that condition is no longer true.
+Ex:
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
 
 
+##For Loops
+You can run the same code multiple times by using a loop.
+
+The most common type of JavaScript loop is called a "for loop" because it runs 
+"for" a specific number of times.
+
+For loops are declared with three optional expressions separated by semicolons:
+
+for ([initialization]; [condition]; [final-expression])
+
+The initialization statement is executed one time only before the loop starts. 
+It is typically used to define and setup your loop variable.
+
+The condition statement is evaluated at the beginning of every loop iteration and 
+will continue as long as it evaluates to true. When condition is false at the start
+of the iteration, the loop will stop executing. This means if condition starts as 
+false, your loop will never execute.
+
+The final-expression is executed at the end of each loop iteration, prior to the next 
+condition check and is usually used to increment or decrement your loop counter.
+
+In the following example we initialize with i = 0 and iterate while our condition i < 5 
+is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression.
+
+Ex:
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+Ex2:
+var myArray = [];
+
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
 
 
+###Odd/Even Numbers with For Loop
+For loops don't have to iterate one at a time. By changing our final-expression, 
+we can count by even numbers.
+
+We'll start at i = 0 and loop while i < 10. We'll increment i by 2 each loop with i += 2.
+ex:
+var ourArray = [];
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+OddEx:
+var myArray = [];
+
+for (var i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
 
 
+###Counting backwards with for loop
+A for loop can also count backwards, so long as we can define the right conditions.
+
+In order to count backwards by twos, we'll need to change our initialization, condition, 
+and final-expression.
+
+We'll start at i = 10 and loop while i > 0. We'll decrement i by 2 each loop with i -= 2.
+
+var myArray = [];
+
+for (var i = 9; i > 0; i -= 2) {
+  myArray.push(i);
+}
 
 
+###Iterate through an Array with a For Loop
+A common task in JavaScript is to iterate through the contents of an array. 
+One way to do that is with a for loop. This code will output each element of the 
+array arr to the console:
+Ex:
+var arr = [10,9,8,7,6];
+for (var i = 0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+
+Remember that Arrays have zero-based numbering, which means the last index of the array 
+is length - 1. Our condition for this loop is i < arr.length, which stops when i is at length - 1.
+
+Ex2:
+var ourArr = [ 9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+Ex3:
+var myArr = [ 2, 3, 4, 5, 6];
+var total = 0;
+
+for (var i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
 
 
+##Nesting For Loops
+If you have a multi-dimensional array, you can use the same logic as the prior waypoint 
+to loop through both the array and any sub-arrays. 
+Here is an example:
+
+var arr = [
+  [1,2], [3,4], [5,6]
+];
+for (var i=0; i < arr.length; i++) {
+  for (var j=0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+
+This outputs each sub-element in arr one at a time. Note that for the inner loop, 
+we are checking the .length of arr[i], since arr[i] is itself an array.
+Ex2:
+
+function multiplyAll(arr) {
+  var product = 1;
+  for (var i=0; i < arr.length; i++) {
+    for (var j=0; j < arr[i].length; j++) {
+      product = product * arr[i][j];
+    }
+  }
+  return product;
+}
 
 
+#Do... While Loops
+This loop is called a "do...while" loop because it first will "do" one pass of the code inside the 
+loop no matter what, and then it runs "while" a specified condition is true and stops once that condition 
+is no longer true. 
+Ex:
+var ourArray = [];
+var i = 0;
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
+
+This behaves just as you would expect with any other type of loop, and the resulting array will look like [0, 1, 2, 3, 4]. 
+However, what makes the do...while different from other loops is how it behaves when the condition fails on the first check. 
+Let's see this in action.
+
+Here is a regular while loop that will run the code in the loop as long as i < 5.
+
+var ourArray = []; 
+var i = 5;
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+
+Notice that we initialize the value of i to be 5. When we execute the next line, we notice that i is not less than 5. 
+So we do not execute the code inside the loop. The result is that ourArray will end up with nothing added to it, so 
+it will still look like this [] when all the code in the example above finishes running.
+
+Now, take a look at a do...while loop.
+
+var ourArray = []; 
+var i = 5;
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
+
+In this case, we initialize the value of i as 5, just like we did with the while loop. When we get to the next line, 
+there is no check for the value of i, so we go to the code inside the curly braces and execute it. We will add one 
+element to the array and increment i before we get to the condition check. Then, when we get to checking if i < 5 see 
+that i is now 6, which fails the conditional check. So we exit the loop and are done. At the end of the above example, 
+the value of ourArray is [5].
+
+Essentially, a do...while loop ensures that the code inside the loop will run at least once.
+Ex:
+Change the while loop in the code to a do...while loop so that the loop will push the number 10 to myArray, and i will 
+be equal to 11 when your code finishes running.
+
+Code:
+var myArray = [];
+var i = 10;
+
+while (i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+Solution:
+var myArray = [];
+var i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
 
 
+#Generate Random Fractions
+JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) 
+and not quite up to 1 (exclusive). Thus Math.random() can return a 0 but never quite return a 1
+
+Like Storing Values with the Equal Operator, all function calls will be resolved before the return 
+executes, so we can return the value of the Math.random() function.
+
+Ex:
+function randomFraction() {
+  return Math.random();
+}
 
 
+##Generate Random Whole Numbers
+Use Math.random() to generate a random decimal.
+Multiply that random decimal by 20.
+Use another function, Math.floor() to round the number down to its nearest whole number.
+Remember that Math.random() can never quite return a 1 and, because we're rounding down, 
+it's impossible to actually get 20. This technique will give us a whole number between 0 and 19.
+
+Putting everything together, this is what our code looks like:
+
+Math.floor(Math.random() * 20);
+
+We are calling Math.random(), multiplying the result by 20, then passing the value to Math.floor() 
+function to round the value down to the nearest whole number.
+
+Ex:
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
 
 
+##Generate Random Whole Numbers within a Range
+Instead of generating a random number between zero and a given number like we did before, we can 
+generate a random number that falls within a range of two specific numbers.
 
+To do this, we'll define a minimum number min and a maximum number max.
+
+Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:
+
+Math.floor(Math.random() * (max - min + 1)) + min
+Ex:
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; // Change this line
+}
+// Change these values to test your function
+var myRandom = randomRange(5, 15);
+
+
+#parseInt Function
+
+The parseInt() function parses a string and returns an integer. Here's an example:
+
+var a = parseInt("007");
+
+The above function converts the string "007" to an integer 7. If the first character in the string 
+can't be converted into a number, then it returns NaN.
+Ex:
+
+function convertToInteger(str) {
+ return parseInt(str);
+}
+
+convertToInteger("56");
+
+
+##parseInt function with a radix
+The parseInt() function parses a string and returns an integer. It takes a second argument for the radix,
+which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+
+The function call looks like:
+
+parseInt(string, radix);
+
+And here's an example:
+
+var a = parseInt("11", 2);
+
+The radix variable says that "11" is in the binary system, or base 2. This example converts the string "11" to an integer 3.
+Ex:
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+
+#Conditional (Ternary) Operator
+The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+
+The syntax is:
+
+condition ? statement-if-true : statement-if-false;
+
+The following function uses an if-else statement to check a condition:
+
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+
+This can be re-written using the conditional operator:
+
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater";
+}
+
+ExCode:
+
+function checkEqual(a, b) {
+    return a === b ? true : false;
+}
+
+checkEqual(1, 2);
+
+
+##Multiple Conditional Operators
+You can chain conditional operators together to check for multiple conditions.
+
+The following function uses if, else if, and else statements to check multiple conditions:
+
+function findGreaterOrEqual(a, b) {
+  if(a === b) {
+    return "a and b are equal";
+  }
+  else if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+
+The above function can be re-written using multiple conditional operators:
+
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+}
+
+Example Code:
+Use multiple conditional operators in the checkSign function to check if a number is positive, negative or zero.
+
+function checkSign(num) {
+  return (num === 0) ? "zero" : (num < 0) ? "negative" : "positive"; 
+}
+
+checkSign(10);
 
 
 
