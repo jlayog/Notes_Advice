@@ -1,9 +1,9 @@
-#Differences between var and let Keywords
+# Differences between var and let Keywords
 With 'var', you may accidentally overrite a variable that you did not intend to overrite. 
 To solve this, 'let' was introduced to help with the 'var' keyword. 
 An error will appear if you try to code the same variables with the 'let' keyword.
 Ex:
-
+```
 let camper = 'James';
 let camper = 'David'; // throws an error
 
