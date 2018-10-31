@@ -1,4 +1,4 @@
-#Continuous Integration
+# Continuous Integration
 Software development practice where engineers/developers is continuously integrating small code changes back into the code 
 base.
 Each change made there is a suite of tests that run automatically that checks code for any bugs or errors.
@@ -27,7 +27,7 @@ all the requirements for integration into the main development branch.
 By exposing build and test information for every commit on every branch, CI progresses towards continuous delivery, or CD, as
 well as a related process called 'Continuous Deployment'.
 
-#Difference between Continuous Delivery and Continuous Deployment
+# Difference between Continuous Delivery and Continuous Deployment
 
 - Continuous Delivery - the pracitce of developing software in such a way that you could release it at any time. 
   When coupled with CI, continuous delivery lets you develop features with modular code in more manageable increments.
@@ -55,7 +55,6 @@ Continuous deployment works in a similar way, by configuring your CI server to d
 In a simple setup, anytime the master branch receives a new commit, the CI provider grabs a current copy of the project, 
 and deploys the master branch to production.
 
-The setup for this type of deployment will vary depending on prodiver.
 
 
 
