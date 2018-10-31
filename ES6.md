@@ -6,7 +6,7 @@ Ex:
 ```
 let camper = 'James';
 let camper = 'David'; // throws an error
-
+```
 So unlike var, when using let, a variable with the same name can only be declared once.
 Note the "use strict". This enables Strict Mode, which catches common coding mistakes and "unsafe" actions.
 Ex:
