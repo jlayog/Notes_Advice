@@ -208,17 +208,21 @@ When a function is defined, it is typically defined along with one or more param
 The actual values that are input (or "passed") into a function when it is called are known as arguments.
 Ex:
 
+```
 function functionWithArgs(a,b) {
   console.log(a + b);
 }
 functionWithArgs(1, 2);
 // 3
-
+```
 Ex2:
+
+```
 function testFun(param1, param2) {
   console.log(param1, param2);
 }
 testFun("Hello", "World");
+````
 We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". 
 Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
 
@@ -1437,6 +1441,7 @@ condition ? statement-if-true : statement-if-false;
 
 The following function uses an if-else statement to check a condition:
 
+```
 function findGreater(a, b) {
   if(a > b) {
     return "a is greater";
@@ -1459,7 +1464,7 @@ function checkEqual(a, b) {
 }
 
 checkEqual(1, 2);
-
+```
 
 ##  Multiple Conditional Operators
 You can chain conditional operators together to check for multiple conditions.
