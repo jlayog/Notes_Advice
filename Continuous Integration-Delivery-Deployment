@@ -55,7 +55,6 @@ Continuous deployment works in a similar way, by configuring your CI server to d
 In a simple setup, anytime the master branch receives a new commit, the CI provider grabs a current copy of the project, 
 and deploys the master branch to production.
 
-The setup for this type of deployment will vary depending on prodiver.
 
 
 
