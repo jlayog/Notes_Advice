@@ -1,5 +1,5 @@
 # Regular Expressions
-## Using the Test Method
+###  Using the Test Method
 Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
 
 If you want to find the word "the" in the string "The dog chased the cat", you could use the following regular expression: /the/. 
@@ -24,6 +24,167 @@ let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString);
 ```
+
+
+### Match Literal Strings
+Here's another example searching for a literal match of the string "Kevin":
+
+```
+let testStr = "Hello, my name is Kevin.";
+let testRegex = /Kevin/;
+testRegex.test(testStr);
+// Returns true
+```
+
+Any other forms of "Kevin" will not match. For example, the regex /Kevin/ will not match "kevin" or "KEVIN".
+
+```
+let wrongRegex = /kevin/;
+wrongRegex.test(testStr);
+// Returns false
+```
+
+
+#### Match a Literal String with Different Possibilities
+Using regexes like /coding/, you can look for the pattern "coding" in another string.
+
+This is powerful to search single strings, but it's limited to only one pattern. You can search for multiple patterns using the 
+alternation or OR operator: |.
+
+This operator matches patterns either before or after it. For example, if you wanted to match "yes" or "no", the regex you want 
+is /yes|no/.
+
+You can also search for more than just two patterns. You can do this by adding more patterns with more OR operators separating 
+them, like /yes|no|maybe/.
+
+
+#### Ignore Case While Matching
+Case (or sometimes letter case) is the difference between uppercase letters and lowercase letters. Examples of uppercase are "A", 
+"B", and "C". Examples of lowercase are "a", "b", and "c".
+
+You can match both cases using what is called a flag. There are other flags but here you'll focus on the flag that ignores case - 
+the i flag. You can use it by appending it to the regex. An example of using this flag is /ignorecase/i. This regex can match the 
+strings "ignorecase", "igNoreCase", and "IgnoreCase".
+Ex:
+
+```
+let myString = "teresaCheung";
+let fccRegex = /teresaCheung/i; 
+let result = fccRegex.test(myString);
+```
+
+
+#### Extract Matches
+You can extract the actual matches you found with the .match() method.
+
+To use the .match() method, apply the method on a string and pass in the regex inside the parentheses. Here's an example:
+
+```
+"Hello, World!".match(/Hello/);
+// Returns ["Hello"]
+let ourStr = "Regular expressions";
+let ourRegex = /expressions/;
+ourStr.match(ourRegex);
+// Returns ["expressions"]
+```
+
+Apply the .match() method to extract the word coding.
+Ex:
+
+```
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; 
+let result = extractStr.match(codingRegex); 
+```
+
+
+#### Find more than the First Match
+
+```
+let testStr = "Repeat, Repeat, Repeat";
+let ourRegex = /Repeat/;
+testStr.match(ourRegex);
+// Returns ["Repeat"]
+```
+
+To search or extract a pattern more than once, you can use the g flag.
+
+```
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+// Returns ["Repeat", "Repeat", "Repeat"]
+```
+
+Using the regex starRegex, find and extract both "Twinkle" words from the string twinkleStar.
+
+Note
+You can have multiple flags on your regex like /search/gi
+Ex:
+
+```
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; 
+let result = twinkleStar.match(starRegex); 
+```
+
+
+#### Match Anything with Wildcard Period
+Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all words that match, say, a 
+misspelling would take a long time. Luckily, you can save time using the wildcard character: .
+
+The wildcard character . will match any one character. The wildcard is also called dot and period. You can use the wildcard 
+character just like any other character in the regex. For example, if you wanted to match "hug", "huh", "hut", and "hum", you can 
+use the regex /hu./ to match all four words.
+
+```
+let humStr = "I'll hum a song";
+let hugStr = "Bear hug";
+let huRegex = /hu./;
+humStr.match(huRegex); // Returns ["hum"]
+hugStr.match(huRegex); // Returns ["hug"]
+```
+
+Ex:
+Complete the regex unRegex so that it matches the strings "run", "sun", "fun", "pun", "nun", and "bun". Your regex should use the 
+wildcard character.
+
+```
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/;
+let result = unRegex.test(exampleStr);
+```
+
+
+### Match Single Character with Multiple Possibilities
+You can search for a literal pattern with some flexibility with character classes. Character classes allow you to define a group 
+of characters you wish to match by placing them inside square ([ and ]) brackets.
+
+For example, you want to match "bag", "big", and "bug" but not "bog". You can create the regex /b[aiu]g/ to do this. The [aiu] is 
+the character class that will only match the characters "a", "i", or "u".
+
+```
+let bigStr = "big";
+let bagStr = "bag";
+let bugStr = "bug";
+let bogStr = "bog";
+let bgRegex = /b[aiu]g/;
+bigStr.match(bgRegex); // Returns ["big"]
+bagStr.match(bgRegex); // Returns ["bag"]
+bugStr.match(bgRegex); // Returns ["bug"]
+bogStr.match(bgRegex); // Returns null
+```
+
+Ex:
+Use a character class with vowels (a, e, i, o, u) in your regex vowelRegex to find all the vowels in the string quoteSample.
+##### Note
+Be sure to match both upper- and lowercase vowels.
+
+```
+
+
+
+
+
 
 
 
