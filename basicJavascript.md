@@ -6,37 +6,39 @@ first word in lowercase and the first letter of each subsequent word is capitali
 
 
 # Number increments
+```
 myVar++ is the equivalent of myVar = myVar + 1
-
+```
 inversely
-
+```
 myVar-- is the equivalent of myVar = myVar - 1
-
+```
 
 # Remainders in Javascript
 The remainder operator % gives the remainder of the division of two numbers.
 Ex:
+```
 5 % 2 = 1 because
 Math.floor(5 / 2) = 2 (Quotient)
 2 * 2 = 4
 5 - 4 = 1 (Remainder)
-
+```
 
 # Augmented Addition
 In programming, it is common to use assignments to modify the contents of a variable. 
 Remember that everything to the right of the equals sign is evaluated first, so we can say:
-
+```
 myVar = myVar + 5;
-
+```
 to add 5 to myVar. Since this is such a common pattern, there are operators which do both a 
 mathematical operation and assignment in one step.
 
 One such operator is the += operator.
-
+```
 var myVar = 1;
 myVar += 5;
 console.log(myVar); // Returns 6
-
+```
 Augmented: 
 Subtraction: var -=
 Division: var /=
@@ -56,21 +58,25 @@ Code:                 Output:
 
 # Adding strings together
 ex:
+```
 var myStr = "This is the start. " + "This is the end." 
-
+```
 Plus Equals Operator
+```
 var myStr = "This is the first sentence. ";
 myStr += "This is the second sentence.";
-
+```
 
 # Length of a String
 You can find the length of a String value by writing .length 
 after the string variable or string literal.
 Ex:
+```
 "Cookies and Cream".length; would output to 17
-
+```
 
 # Word Blannks
+```
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
   var result = "";
       result+= "My "+myAdjective+" "+myNoun+" "+myVerb+" very "+myAdverb+".";
@@ -80,34 +86,40 @@ function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
 
 // Change the words here to test your function
 wordBlanks("cat", "small", "walked", "slowly");
-
+```
 
 
 # Arrays
 --You can store multiple values within one variable using an Array
 Ex:
+```
 myVar = ["Me", 23]
-
---You can also nest one array within another   
+```
+--You can also nest one array within another  
+```
 var myArray = [["Treston", 22], ["Ohio", 578]];
-
+```
 When counting Arrays start at 0. So for example:
+```
 var myArray = [50, 60, 70];
-
+```
 typing array[0]; would output to 50
 
 you can also assign it to other variables as such:
+```
 var myData = myArray[2]; // output: 70
-
+```
 --You can also overrite Array data because unline strings, arrays are mutable
 Ex:
+```
 var myArray = [50, 60, 70];
 myArray[0] = 15; // output: [15, 60 ,70]
-
+```
 
 # Multi-Dimensional Arrays with Indexes
 Multi-Dimensional Arrays are like inception, a dream within a dream, an array within an array.
 For example: 
+```
 var arr = [
   [1,2,3],
   [4,5,6],
@@ -117,50 +129,56 @@ var arr = [
 arr[3]; // equals [[10,11,12], 13, 14]
 arr[3][0]; // equals [10,11,12]
 arr[3][0][1]; // equals 11
+```
 
 # .push()
 An easy way to append data to the end of an array is via the push() function.
 .push() takes one or more parameters and "pushes" them onto the end of the array.
 Example:
+```
 var myArray = [1,2,3]
 myArray.push(4)
 // myArray is now [1,2,3,4]
-
+```
 More complex ex:
+```
 var myArray = [["John", 23], ["cat", 2]];
 myArray.push(["dog", 3])
 //myArray is now  [["John", 23], ["cat", 2], ["dog", 3]]
-
+```
 
 # Manipulating Arrays with .pop()
 .pop() is used to "pop" a value off of the end of an array. 
 We can store this "popped off" value by assigning it to a variable. 
 In other words, .pop() removes the last element from an array and returns that element. 
 Ex:
+```
 var myArray = [["John", 23], ["cat", 2]];
 var removedFromMyArray = myArray.pop(["cat",2]);
 // myArray is now  [["John", 23]]
 // and removedFromArray is ["cat", 2]
+```
 
 # .shift()
 .shift() removes the first item from an Array.
 Ex:
+```
 var myArray = [["John", 23], ["dog", 3]];
 var removedFromMyArray = myArray.shift(["John", 23]);
 // myArray is now  ["dog", 3]
 // and removedFromArray is ["John", 23]
-
+```
 
 # .unshift()
 .unshift() works exactly like .push(), but instead of adding the element at the end of the array, 
 unshift() adds the element at the beginning of the array.
 Ex:
-
+```
 var ourArray = ["Stimpson", "J", "cat"];
 ourArray.shift(); // ourArray now equals ["J", "cat"]
 ourArray.unshift("Happy"); 
 // ourArray now equals ["Happy", "J", "cat"]
-
+```
 
 # Functions
 In JavaScript, we can divide up our code into reusable parts called functions.
