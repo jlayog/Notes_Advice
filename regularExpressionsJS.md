@@ -236,7 +236,8 @@ let result = quoteSample.match(myRegex);
 
 
 ### Negate match
-To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not 
+To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do 
+not 
 want to match.
 
 For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space 
@@ -250,7 +251,64 @@ let result = quoteSample.match(myRegex);
 ```
 
 
+### Match Characters that occur one or more times
+You can use the + character to check if that is the case. Remember, the character or pattern has to be present consecutively. 
+That is, the character has to repeat one after the other.
 
+For example, /a+/g would find one match in "abc" and return ["a"]. Because of the +, it would also find a single match in "aabc" 
+and return ["aa"].
+
+If it were instead checking the string "abab", it would find two matches and return ["a", "a"] because the a characters are not 
+in a row - there is a b between them. Finally, since there is no "a" in the string "bcd", it wouldn't find a match.
+Ex:
+
+```
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g; 
+let result = difficultSpelling.match(myRegex);
+```
+
+
+### Match characters that occur zero or more times
+There's an option that matches characters that occur zero or more times.
+
+The character to do this is the asterisk or star: *.
+
+```
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+soccerWord.match(goRegex); // Returns ["goooooooo"]
+gPhrase.match(goRegex); // Returns ["g"]
+oPhrase.match(goRegex); // Returns null
+```
+
+Ex:
+Create a regex chewieRegex that uses the * character to match all the upper and lower"a" characters in chewieQuote. Your regex 
+does not need flags, and it should not match any of the other quotes.
+
+```
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/; //We can’t use flags to accept capital letter (ie ‘A’), so running /Aa*/ should catch 
+both the first capital ‘A’ and the duplicated ‘a’-s that follow.
+let result = chewieQuote.match(chewieRegex);
+```
+
+
+### Lazy Matching
+In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern 
+and returns it as a match. The alternative is called a lazy match, which finds the smallest possible part of the 
+string that satisfies the regex pattern.
+
+You can apply the regex /t[a-z]*i/ to the string "titanic". This regex is basically a pattern that starts with t, 
+ends with i, and has some letters in between.
+
+Regular expressions are by default greedy, so the match would return ["titani"]. It finds the largest sub-string 
+possible to fit the pattern.
+
+However, you can use the ? character to change it to lazy matching. "titanic" matched against the adjusted regex 
+of /t[a-z]*?i/ returns ["ti"].
 
 
 
