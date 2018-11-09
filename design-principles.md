@@ -41,6 +41,79 @@ Popular with graphic & web designers when presenting ideas, or a direction they 
 A sketch, or series of sketches, on paper or screen that serves as a blueprint for a website layout. 
 They are effective because they are quick to produce, focus on optimizing functionality, layout, and content organization without letting colors & style get in the way.
 
+Pros: Easiest and best way to get ideas out in the open.
+Cons: If there is no budget, it may not be the best use of your time. Not appealing to a client.
+
+## Rough
+First draft of a layout, after sketching is complete. It's called a rough, because the first draft is often not directly "on the mark" and needs much work before the design is perfect.
+
+## Comp
+Second draft of a layout or design, once the roughs have been approved.
+
+## Mockup
+An official, final draft of a web design. This is usually done in software like Adobe Photoshop, or sketch.
+
+
+# Phases of Web Development
+
+## Discovery Phase
+- Initial phone calls, meetings, consultations
+- Research, planning, scheduling
+- Develop site structure/sitemap
+- Time & Cost Breakdown: ~ 10 hours
+
+## Creative Phase
+- User experience design
+- Wireframing
+- Web design Mockups
+- Time & Cost Breakdown: ~ 40 Hours
+
+## Development Phase
+- Convert designs into HTML & CSS
+- Additional web development (i.e. WordPress, CMS, PHP, MySQL)
+- Browser and mobile testing
+- Time & Cost Breakdown: ~ 40 hours
+
+## Launch Phase
+- Review / Q&A
+- Moving local website to live server
+- Client training
+- Final Payment
+- Time & Cost Breakdown: ~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
