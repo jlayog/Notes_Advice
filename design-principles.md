@@ -77,9 +77,11 @@ An official, final draft of a web design. This is usually done in software like 
 ## Launch Phase
 - Review / Q&A
 - Moving local website to live server
-- Client training
-- Final Payment
-- Time & Cost Breakdown: ~
+- Client training (teaching WordPress)
+- Final Payment (Usually ask 50% upfront)
+- Time & Cost Breakdown: ~ 10 hours
+
+
 
 
 
