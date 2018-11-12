@@ -429,10 +429,15 @@ let result = quoteSample.match(nonAlphabetRegex).length;
 - Your regex should find 12 non-alphanumeric characters in "123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ."
 
 
+### Match numbers
+The shortcut to look for digit characters is \d, with a lowercase d. This is equal to the character class [0-9], which looks for 
+a single character of any number between zero and nine.
+Ex:
 
-
-
-
-
+```
+let numString = "Your sandwich will be $5.00";
+let numRegex = /\d/g; // Change this line
+let result = numString.match(numRegex).length;
+```
 
 
