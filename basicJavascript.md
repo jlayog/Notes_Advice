@@ -1,5 +1,8 @@
 # Javascript notes 
 
+80/20 Rule: Using 20% of javascript to get 80% of progress done.
+
+
 # Notation
 Best Practice in writing JS, details in camelCase. In camelCase, multi-word variable names have the 
 first word in lowercase and the first letter of each subsequent word is capitalized.
