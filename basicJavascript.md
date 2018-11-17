@@ -2,6 +2,39 @@
 
 80/20 Rule: Using 20% of javascript to get 80% of progress done.
 
+Statements in Javascript have five separate elements:
+
+1. Values
+    - Fixed (a.k.a Literals)
+        Doesn't ever change.
+        
+        Numbers such as 17.425 or 946
+        
+        Strings are simply text, written in 'single' or "double quotes"
+        
+        Expressions compute to values, like math: 10 * 4 or 3.14 - 6
+
+    - Variable
+        Can change. Used to store data, such as numbers, strings, or expressions. Think of a variable as a bucket that can have stuff in it.
+        
+        JS uses the keyword var to define a variable, then uses = to assign a value to the variable.
+
+2. Keywords
+3. Expressions
+4. Operators
+    - Arithmetic 
+        Used for math. Such as:
+        + - * / 
+        
+    - Assignment
+        Used to assign values to variables. Such as:
+        = += -= *= /=
+    
+5. Comments
+    - Single line comments //
+    
+    - Multi line comments /* */
+
 
 # Notation
 Best Practice in writing JS, details in camelCase. In camelCase, multi-word variable names have the 
