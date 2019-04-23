@@ -78,6 +78,7 @@ Some examples of subjective research:
 It describes the goals, expectations, motivations, and behaviour of real people. Why do they come to your site? What are they looking for? What makes them nervous? And so on.
 
 All the information you need should be in your research and data. If you can’t back it up with research or data, you’re just making shit up and you should stop.
+
 ---
 **Bad Profile**: Persona A is a female, between the ages of 35-45 with an above average income and education. They have at least one child and own at least one new vehicle. They are outgoing and career-oriented, and tend to be right-brain thinkers.
 
