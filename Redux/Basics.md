@@ -17,10 +17,10 @@
 ---
 
 ## Example
-           ____________Store_____________        
+           ------------Store-------------        
            |                            |
 Action --> | Reducer    -->      State  |
-           |____________________________|
-
+           |                            |
+           ------------------------------
 
 Turn 'asdf' into an array (**Action**)  -->  If the action's type is 'split', it will take a string of characters and turn it into an array (**Reducer**) --> ['a', 's', 'd', 'f'] (**State**)
