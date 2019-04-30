@@ -10,6 +10,7 @@ const reducer = () => [];
 const store = Redux.createStore(reducer);
 ```
 *Here we add the reducer function, that returns an array whenever it gets invoked. Then we pass that reducer to the .createStore call*
+
 ---
 
 Remember that store contains all of our application's state and all of our reducers (*however many you may have for the application*), in which you can ask the store for its current state any point in time. As done below:
