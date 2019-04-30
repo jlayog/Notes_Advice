@@ -4,7 +4,7 @@
 # 4 key concepts:
 
 - **Action**:   
-   *A plain javascript object, such as values in curly braces, that tells the reducer how to change its data.*   
+   *A plain javascript object, such as values in curly braces, that tells the reducer how to change its data or modify the state that it is producing.*   
    Has one requirement: Must have a type property.
 - **Reducer**:   
    *A function that returns/produces some amount of data.* 

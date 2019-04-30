@@ -20,3 +20,27 @@ const store = Redux.createStore(reducer);
 store.getState();
 ```
 *So this tells us that by default, when a redux store is created and reducer is passed in, the reducer will be ran, and whatever the reducer returns, will become the application's or redux store state.*
+---
+
+If we change the return value from the reducer, the application state will change as well.
+```javascript
+const reducer = () => [123456789];
+const store = Redux.createStore(reducer);
+
+store.getState();
+
+// [123456789]
+```
+*As we plug in values for our reducer function, the application state updates as well.*
+---
+
+Creating an Action.
+```javascript
+const reducer = () => [123456789];
+const store = Redux.createStore(reducer);
+
+store.getState();
+
+const action = {};
+```
+*Again, action is a plain javascript object, which we have created right here. The only requirement of an action is that it defines a type property.*
