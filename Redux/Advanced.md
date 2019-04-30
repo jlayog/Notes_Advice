@@ -21,6 +21,7 @@ const store = Redux.createStore(reducer);
 store.getState();
 ```
 *So this tells us that by default, when a redux store is created and reducer is passed in, the reducer will be ran, and whatever the reducer returns, will become the application's or redux store state.*
+
 ---
 
 If we change the return value from the reducer, the application state will change as well.
@@ -33,6 +34,7 @@ store.getState();
 // [123456789]
 ```
 *As we plug in values for our reducer function, the application state updates as well.*
+
 ---
 
 Creating an Action.
@@ -68,6 +70,7 @@ const action = {
 };
 ```
 *We will also tell the reducer which string we want it to split by passing it on a payload property. The payload is the piece of data we want to work on.*
+
 ---
 
 Now we will update our reducer and instruct how to handle the action.
@@ -92,6 +95,7 @@ const action = {
 *Reducers are always called with two arguments. The first is the current state that it has produced, and the second is an action.*  
 
 In other words, this code says that we have a reducer that gets called with two arguments. If the action's type is equal to split string, then it will take whatever the action's payload property is, and split it with an empty string, turning it into an array of characters.
+
 ---
 
 To take the action and push it into the reducer, we will write this out:
