@@ -17,8 +17,8 @@
 ---
 
 ## Example
-                  (Store)
-Action --> Reducer  -->  State  
+
+Action --> Reducer -->  State  
            
 
 Turn 'asdf' into an array (**Action**)  -->  If the action's type is 'split', it will take a string of characters and turn it into an array (**Reducer**) --> ['a', 's', 'd', 'f'] (**State**)
