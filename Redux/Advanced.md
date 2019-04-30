@@ -44,3 +44,27 @@ store.getState();
 const action = {};
 ```
 *Again, action is a plain javascript object, which we have created right here. The only requirement of an action is that it defines a type property.*
+
+```javascript
+const reducer = () => [123456789];
+const store = Redux.createStore(reducer);
+
+store.getState();
+
+const action = { type: 'split_string' };
+```
+*The type property will always be a string. The purpose of the type property is to tell the reducer to commit a specific operation, like a command or instruciton. In this exmaple we will use 'split_string'.*
+
+```javascript
+const reducer = () => [123456789];
+const store = Redux.createStore(reducer);
+
+store.getState();
+
+const action = { 
+    type: 'split_string', 
+    payload: 'asdf' 
+    };
+```
+*We will also tell the reducer which string we want it to split by passing it on a payload property. The payload is the piece of data we want to work on.*
+---
