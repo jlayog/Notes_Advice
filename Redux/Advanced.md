@@ -56,7 +56,7 @@ store.getState();
 
 const action = { type: 'split_string' };
 ```
-*The type property will always be a string. The purpose of the type property is to tell the reducer to commit a specific operation, like a command or instruciton. In this exmaple we will use 'split_string'.*
+*The type property will always be a string. The purpose of the type property is to tell the reducer to commit a specific operation, like a command or instruciton. In this example we will use 'split_string'.*
 
 ```javascript
 const reducer = () => [];
