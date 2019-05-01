@@ -18,9 +18,7 @@
 
 ## Example
 
-| | Store | 
---- | --- | ---
-Action > | Reducer > | State
+Action > | Reducer >  State |
 
            
 
