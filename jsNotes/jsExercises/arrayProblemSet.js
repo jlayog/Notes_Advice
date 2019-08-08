@@ -15,6 +15,10 @@ printReverse(["a", "b", "c"]);
 /*Write a function isUniform() which takes an array as an argument and returns true
 if all elements in the array are identical*/
 
+function isUniform(arr) {
+    
+}
+
 isUniform([1,1,1,1]);
 isUniform([2,1,1,1]);
 isUniform(["a", "b", "p"]);
