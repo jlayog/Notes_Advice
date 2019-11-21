@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tabular Data: Parsing CSV</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"></script>
+    </head>
+    <body>
+
+
+        <canvas id="chart" width="100vw" height="50vh"></canvas>
+
+        <script>
+            // xlabels needs to be a global variable otherwise it returns a Not a function
+            // refactored
+            // const xlabels = [];
+            // const ytemps = [];
+
+            // lets put the creation of a the chart in separate function
+            chartIt();
+            getData();
+
+            async function chartIt() {
+                const data = await getData();
+                const ctx = document.getElementById('chart').getContext('2d');
+
+                const myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.xs,
+                    datasets: [{
+                        label: 'Combined Land-Surface Air and Sea-Surface Water Temperature in °C',
+                        data: data.ys,
+                        fill: false,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    // Include a dollar sign in the ticks
+                                    callback: function(value, index, values) {
+                                        return value + '°';
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                });
+            }
+
+            async function getData() {
+                const xs = [];
+                const ys = [];
+
+                const response = await fetch('test.csv');
+                const data = await response.text();
+
+                // regex expression for line breaks
+                const table = data.split(/\n/).slice(1);
+                table.forEach(row => {
+                    const columns = row.split(',');
+                    const year = columns[0];
+                    xs.push(year);
+                    const temp = columns[1];
+                    // more accuracy in temperature
+                    // file is still in text, so we must parse again to make it a number
+                    ys.push(parseFloat(temp) + 14);
+                    console.log(row)
+                });
+                return { xs, ys }
+            }
+        </script>
+    </body>
+</html>
