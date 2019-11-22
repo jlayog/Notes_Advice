@@ -14,5 +14,5 @@
 
 #### Step 1: 
 <p>Upon VirtualBox startup, you should be given the option to create a virtual machine.</p>
-    - click **New**
-        <img src="/newVM.png">
+    - click **New** 
+        <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/newVM.PNG">
