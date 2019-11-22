@@ -1,6 +1,6 @@
 <h2 align="center">Setting up Ubuntu 18.04 in Oracle Virtual Box with Windows</h2>
 
-<p>This is a personal guide to setting up a VM, port security, for easily discardable development environments.</p>
+<p>This is a personal guide to setting up a VM, for easily discardable development environments.</p>
 
 ### What resources you will need to install:
 
