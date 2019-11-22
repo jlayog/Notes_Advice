@@ -21,7 +21,7 @@ Upon VirtualBox startup, you should be given the option to create a virtual mach
     
 - You will then be prompted with another box.
 
-    <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/vmWindowOpen.png">
+    <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/vmWindowOpen.PNG?raw=true">
 
 From here you have the option to **Name** your Virtual Machine. It can be whatever you want, for me, I will be naming it `devbox`.
         
@@ -56,5 +56,5 @@ Congrats, you have just made 1 instance of a virtual machine. Hold your horses, 
 
 With your virtual machine selected, you should be able to see the details of your virtual machine:
 
-<img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/vmDetails">
+<img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/vmDetails.PNG?raw=true">
 
