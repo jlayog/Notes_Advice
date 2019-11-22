@@ -1,4 +1,4 @@
-<h2 align="center">Setting up Oracle Virtual Box with Windows</h2>
+<h2 align="center">Setting up Ubuntu 18.04 in Oracle Virtual Box with Windows</h2>
 
 <p>This is a personal guide to setting up a VM, port security, for easily discardable development environments.</p>
 
@@ -58,3 +58,25 @@ With your virtual machine selected, you should be able to see the details of you
 
 <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/vmDetails.PNG?raw=true">
 
+Once you've checked that the details are similar to yours from the image above, click '**Settings**'.
+
+You're going to want the following options so that your VM runs smoothly, to which I'll try and explain why:  
+
+- **Display**
+    - `Video Memory`: **128 MB**
+    
+- **Storage**
+    - `Controller: IDE` --> `Empty`: On the right you should see a little blue disc, click that and it will give you the option to '**Choose Virtual Optical Disk File**'.  
+    - You should find the Ubuntu live server that you have downloaded in the beginning. (**ubuntu-18.04.3-live-server-amd64.iso**) and open that file.  
+
+- **Network**
+    - `Adapter 1`: This adapter is currently whatever your machine is using as a network for internet. 
+    - `Adapter 2`: For locking down purposes, we're going to **Enable Network Adapter**. Then select the dropdown **Attached to:** --> **Host-only adapter**. This is so your virtual machine can use your *real* machine's network for internet connection.
+
+Click '**OK**' and you should now have your VM ready to go.
+
+<hr>
+
+Now you can click '**Start**' and your VM should start up and prompt you in configuring the Ubuntu system! 
+
+Hopefully this was helpful, and feedback is welcome :)
