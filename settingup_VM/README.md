@@ -2,10 +2,7 @@
 
 <p>This is a personal guide to setting up a VM, port security, for easily discardable development environments.</p>
 
-<br>
-
-### What resources you will need:
-
+### What resources you will need to install:
 
 - [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
     - Personally, this is what I was taught with, so it is what we will be using.
@@ -13,4 +10,5 @@
 - [Ubuntu Server 18.04 LTS](https://ubuntu.com/#download)
     - LTS due to some incompatibility and some bugs in the latest version.
     
-<p> Once Oracle VM Virtual Box is installed, open the program.</p>
+<hr>
+
