@@ -37,3 +37,21 @@ Honestly, you can leave it as is, but to make sure there aren't any hang-ups, I 
 It will now ask you the option of either not adding a virtual hard disk, creating a virtual hard disk, or use an existing virtual hard disk. If freshly installed, you shouldn't have the option of using an existing one.
 
 Go ahead and click **Create a virtual hard disk now**.
+
+##### Choose the following options:  
+- **VDI (Virtual Disk Image)**  
+- **Dyanmically allocated**  
+- When arriving to file location, don't alter anything unless you want it in a different location.
+- **Set virtual hard disk size to 40.00GB** (just to be safe)
+- Now click **Create**
+
+Congrats, you have just made 1 instance of a virtual machine. Hold your horses, as we aren't done yet.
+
+<hr>
+
+### Step 2: VM Settings
+
+With your virtual machine selected, you should be able to see the details of your virtual machine:
+
+<img src="">
+
