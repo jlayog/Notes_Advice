@@ -14,5 +14,10 @@
 
 #### Step 1: 
 <p>Upon VirtualBox startup, you should be given the option to create a virtual machine.</p>
-    - click **New** 
+    - click **New**.
         <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/newVM.PNG">
+    - You will then be prompted with another box.
+        <p>From here you have the option to **Name** your Virtual Machine. It can be whatever you want, for me, I will be naming it `devbox`.</p>
+        <p>The **Machine Folder** option should already have a path filled out for you, from when you installed VirtualBox</p>
+        <p>For **Type**, we will go with **Linux**, and **Version** --> **Ubuntu (64-bit)**.</p>
+        
