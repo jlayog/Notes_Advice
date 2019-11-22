@@ -13,7 +13,7 @@
     
 <hr>
 
-#### Step 1: Initial Setup
+### Step 1: Initial Setup
 Upon VirtualBox startup, you should be given the option to create a virtual machine.
 - click **New**.  
 
@@ -28,11 +28,11 @@ From here you have the option to **Name** your Virtual Machine. It can be whatev
 
 Now we can hit **Next**.
 
-##### Memory Size
+#### Memory Size
 
 Honestly, you can leave it as is, but to make sure there aren't any hang-ups, I will set the amount of memory to **4096** MB.
 
-##### Hard Disk
+#### Hard Disk
 
 It will now ask you the option of either not adding a virtual hard disk, creating a virtual hard disk, or use an existing virtual hard disk. If freshly installed, you shouldn't have the option of using an existing one.
 
