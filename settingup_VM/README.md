@@ -67,7 +67,7 @@ You're going to want the following options so that your VM runs smoothly, to whi
     
 - **Storage**
     - `Controller: IDE` --> `Empty`: On the right you should see a little blue disc, click that and it will give you the option to '**Choose Virtual Optical Disk File**'.  
-    - You should find the Ubuntu live server that you have downloaded in the beginning. (**ubuntu-18.04.3-live-server-amd64.iso**) and open that file.  
+    - You should find the Ubuntu live server that you have downloaded in the beginning (**ubuntu-18.04.3-live-server-amd64.iso**) and open that file.  
 
 - **Network**
     - `Adapter 1`: This adapter is currently whatever your machine is using as a network for internet. 
