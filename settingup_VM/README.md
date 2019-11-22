@@ -15,7 +15,7 @@
 
 ### Step 1: Initial Setup
 Upon VirtualBox startup, you should be given the option to create a virtual machine.
-- click **New**.  
+- click '**New**'.  
 
     <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/newVM.PNG">  
     
@@ -27,9 +27,9 @@ From here you have the option to **Name** your Virtual Machine. It can be whatev
         
 - The **Machine Folder** option should already have a path filled out for you, from when you installed VirtualBox</p>
 
-- For **Type**, we will go with **Linux**, and **Version** --> **Ubuntu (64-bit)**.
+- For **Type**, we will go with '**Linux**', and **Version** --> '**Ubuntu (64-bit)**'.
 
-Now we can hit **Next**.
+Now we can hit '**Next**'.
 
 #### Memory Size
 
@@ -39,14 +39,14 @@ Honestly, you can leave it as is, but to make sure there aren't any hang-ups, I 
 
 It will now ask you the option of either not adding a virtual hard disk, creating a virtual hard disk, or use an existing virtual hard disk. If freshly installed, you shouldn't have the option of using an existing one.
 
-Go ahead and click **Create a virtual hard disk now**.
+Go ahead and click '**Create a virtual hard disk now**'.
 
 ##### Choose the following options:  
-- **VDI (Virtual Disk Image)**  
-- **Dyanmically allocated**  
+- '**VDI (Virtual Disk Image)**'  
+- '**Dyanmically allocated**'  
 - When arriving to file location, don't alter anything unless you want it in a different location.
-- **Set virtual hard disk size to 40.00GB** (just to be safe)
-- Now click **Create**
+- '**Set virtual hard disk size to 40.00GB**' (just to be safe)
+- Now click '**Create**'
 
 Congrats, you have just made 1 instance of a virtual machine. Hold your horses, as we aren't done yet.
 
