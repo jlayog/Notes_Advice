@@ -15,8 +15,10 @@
 
 #### Step 1: Initial Setup
 Upon VirtualBox startup, you should be given the option to create a virtual machine.
-- click **New**.
-    <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/newVM.PNG">
+- click **New**.  
+
+    <img src="https://github.com/jlayog/Notes_Advice/blob/master/settingup_VM/images/newVM.PNG">  
+    
 - You will then be prompted with another box.
 From here you have the option to **Name** your Virtual Machine. It can be whatever you want, for me, I will be naming it `devbox`.
         
