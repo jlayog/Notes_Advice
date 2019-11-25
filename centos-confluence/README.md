@@ -95,7 +95,7 @@ Ensure you download a compatible version of MySQL for the latest version of conf
 ### Step 8: Setup MySQL Database
 
 ```shell
-  sudo mysql -u confluenceusr -p
+  sudo mysql -u <confluenceusr> -p
 ```
 
 ```sql
