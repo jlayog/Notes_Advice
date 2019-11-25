@@ -94,8 +94,35 @@ Ensure you download a compatible version of MySQL for the latest version of conf
 
 ### Step 8: Setup MySQL Database
 
+```shell
+  sudo mysql -u confluenceusr -p
+```
+
 ```sql
   CREATE DATABASE <database-name> CHARACTER SET utf8 COLLATE utf8_bin;
-  GRANT ALL PRIVILEGES ON <database-name>.* TO '<confluenceusr>'@'localhost'
+  GRANT ALL PRIVILEGES ON <database-name>.* TO '<confluenceusr>'@'localhost';
   EXIT
 ```
+
+### Step 9: Install MySQL driver 
+Download the MySQL driver for Confluence then copy the .bin.jar file to the Confluence install directory.  
+**NOTE**: *Make sure that the MySQL driver is compatible with your version of Confluence.*
+
+```shell
+  wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.46.zip
+  sudo unzip mysql-connector-java-5.1.46.zip -d mysql-connector
+  sudo cp mysql-connector/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
+``` 
+
+Restart Confluence.
+
+<hr>
+
+### Step 10: Finished
+Congrats, you have now set up Confluence at http://<your-server-ip/name>:8090 and run through the initial configuration and connect you to MySQL databse.
+
+You can also start confluence by typing:
+```shell
+  sudo /etc/init.d/confluence start
+```
+
