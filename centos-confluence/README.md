@@ -9,3 +9,19 @@
   passwd [confluenceusr]
   usermod -aG wheel [confluenceusr]
 ```
+
+<hr>
+
+### Step 2: Download Confluence
+
+To get the latest release [atlassian.com/software/confluence/download-archives](https://www.atlassian.com/software/confluence/download-archives).
+
+Ensure that you use the latest Linux Installer (64-bit) version that ends in .bin
+
+At the time of writing this, I am using the **7.04 Linux Installer**
+
+```
+  su confluenceusr
+  cd ~
+  sudo wget https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-[VERSION-NUMBER]-x64.bin
+```
