@@ -23,3 +23,14 @@ At the time of writing this, I am using the **7.04 Linux Installer**
   cd ~
   sudo wget https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-[VERSION-NUMBER]-x64.bin
 ```
+
+<hr>
+
+### Step 3: Install Confluence Server 
+
+First make the .bin executable and then install it. When finished installing, the installer will ask you if you want to launch Confluence. Enter **no**
+
+```bash
+  sudo chmod a+x atlassian-confluence-[VERSION]-x64.bin
+  sudo ./atlassian-confluence-[VERSION]-x64.bin
+```
