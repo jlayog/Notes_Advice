@@ -5,9 +5,9 @@
 ### Step 1: Create a Confluence Service Account
 
 ```shell
-  adduser [confluenceusr]
-  passwd [confluenceusr]
-  usermod -aG wheel [confluenceusr]
+  adduser <confluenceusr>
+  passwd <confluenceusr>
+  usermod -aG wheel <confluenceusr>
 ```
 
 <hr>
@@ -89,3 +89,13 @@ Ensure you download a compatible version of MySQL for the latest version of conf
 ```shell
   service mysqld restart
 ```  
+
+<hr>
+
+### Step 8: Setup MySQL Database
+
+```sql
+  CREATE DATABASE <database-name> CHARACTER SET utf8 COLLATE utf8_bin;
+  GRANT ALL PRIVILEGES ON <database-name>.* TO '<confluenceusr>'@'localhost'
+  EXIT
+```
