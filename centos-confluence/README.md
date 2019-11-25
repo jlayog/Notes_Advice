@@ -19,9 +19,9 @@ Ensure that you use the latest Linux Installer (64-bit) version that ends in .bi
 At the time of writing this, I am using the **7.04 Linux Installer**  
 
 ```shell
-  su confluenceusr
-  cd ~
-  sudo wget https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-[VERSION-NUMBER]-x64.bin
+ $ su confluenceusr
+ $ cd ~
+ $ sudo wget https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-[VERSION-NUMBER]-x64.bin
 ```
 
 <hr>
