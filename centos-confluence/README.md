@@ -133,7 +133,7 @@ You can also start confluence by typing:
 Make sure you have at least 700MB memory, as that is Confluence's minimum requirement. Allocate at least 2 CPU cores.
 
 For having your Confluence viewable to everyone from the same network as you, **Port Forwading Rules:**
-- **Host IP:** <your-IPv4-public-address>  
+- **Host IP:** *your-IPv4-public-address* 
 - **Host Port:** 8090
-- **Guest IP:** <your-VM-host-only-network-IPv4-address>
+- **Guest IP:** *your-VM-host-only-network-IPv4-address*
 - **Guest Port:** 8090
