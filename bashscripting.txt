@@ -1,8 +1,8 @@
-#Bash notes on Ubuntu 18.04
+# Bash notes on Ubuntu 18.04
 
-#Simple bash notes/commands
+# Simple bash notes/commands
 
-#!/usr/bin/env bash  --sets up the bash environment like setting a doctype AKA shebang line
+# !/usr/bin/env bash  --sets up the bash environment like setting a doctype AKA shebang line
 
 $ chmod changes permission of a script
 
@@ -19,7 +19,7 @@ $ echo
   
 -----------------------------------------------------------------------------------------------------
 
-#Bash scripting
+# Bash scripting
 
 Step 1:
 Setup the environment with #!/usr/bin/env bash
