@@ -2,4 +2,4 @@
 
 
 
-# Cleaner, updated, and better formatted @(https://jinlo.gitbook.io/languages/)[https://jinlo.gitbook.io/languages/]
+# Cleaner, updated, and better formatted @https://jinlo.gitbook.io/languages/
